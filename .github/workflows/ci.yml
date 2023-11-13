@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
       - name: Copy files
         run: |
-          cp files/* ${{ matrix.provider }}/
+          cp -rf files/* ${{ matrix.provider }}/
           tree .
       - name: Build and push
         uses: docker/bake-action@v4
