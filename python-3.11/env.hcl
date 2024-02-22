@@ -1,5 +1,5 @@
 variable "version" {
-  default = "1.39.0"
+  default = "1.41.2"
 }
 variable "provider" {
   default = "python"
