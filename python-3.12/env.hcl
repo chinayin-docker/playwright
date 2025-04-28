@@ -5,7 +5,7 @@ variable "provider" {
   default = "python"
 }
 variable "provider_minor" {
-  default = "3.11"
+  default = "3.12"
 }
 
 group "default" {

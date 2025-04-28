@@ -15,12 +15,12 @@ Usage
 You can use the image directly, e.g.
 
 ```bash
-docker run --rm -it chinayin/playwright:1.41.2
-docker run --rm -it chinayin/playwright:1.41.2-python3.11
-docker run --rm -it chinayin/playwright:1.41.2-chromium--python3.11
-docker run --rm -it chinayin/playwright:1.41.2-firefox--python3.11
-docker run --rm -it chinayin/playwright:1.41.2-webkit--python3.11
-docker run --rm -it chinayin/playwright:1.41.2-node18
+docker run --rm -it chinayin/playwright:1.52.0
+docker run --rm -it chinayin/playwright:1.52.0-python3.12
+docker run --rm -it chinayin/playwright:1.52.0-chromium--python3.12
+docker run --rm -it chinayin/playwright:1.52.0-firefox--python3.12
+docker run --rm -it chinayin/playwright:1.52.0-webkit--python3.12
+docker run --rm -it chinayin/playwright:1.52.0-node18
 ```
 
 The images are built daily and have the security release enabled, so will contain any security updates released more
@@ -29,5 +29,5 @@ than 24 hours ago.
 You can also use the images as a base for your own Dockerfile:
 
 ```bash
-FROM chinayin/playwright:1.41.2
+FROM chinayin/playwright:1.52.0
 ```

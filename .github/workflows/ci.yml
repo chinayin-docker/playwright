@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        provider: [ "python-3.11" ]
+        provider: [ "python-3.11", "python-3.12" ]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
