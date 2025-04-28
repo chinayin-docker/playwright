@@ -6,7 +6,7 @@
 #--------------------------------------------------------------------------
 #
 
-FROM python:3.12-slim-bullseye
+FROM python:3.12-slim
 LABEL maintainer="chinayin <whereismoney@qq.com>"
 ENV DEBIAN_FRONTEND=noninteractive
 
