@@ -31,3 +31,4 @@ You can also use the images as a base for your own Dockerfile:
 ```bash
 FROM chinayin/playwright:1.52.0
 ```
+
