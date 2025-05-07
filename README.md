@@ -17,9 +17,9 @@ You can use the image directly, e.g.
 ```bash
 docker run --rm -it chinayin/playwright:1.52.0
 docker run --rm -it chinayin/playwright:1.52.0-python3.12
-docker run --rm -it chinayin/playwright:1.52.0-chromium--python3.12
-docker run --rm -it chinayin/playwright:1.52.0-firefox--python3.12
-docker run --rm -it chinayin/playwright:1.52.0-webkit--python3.12
+docker run --rm -it chinayin/playwright:1.52.0-chromium-python3.12
+docker run --rm -it chinayin/playwright:1.52.0-firefox-python3.12
+docker run --rm -it chinayin/playwright:1.52.0-webkit-python3.12
 docker run --rm -it chinayin/playwright:1.52.0-node18
 ```
 
