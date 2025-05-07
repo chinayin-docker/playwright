@@ -14,7 +14,7 @@ RUN set -eux \
     pwd \
     tree .
 
-COPY prebuildfs /
+#COPY prebuildfs /
 
 ARG CHANGE_SOURCE=true
 ENV CHANGE_SOURCE ${CHANGE_SOURCE}
