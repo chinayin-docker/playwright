@@ -17,22 +17,15 @@ ENV CHANGE_SOURCE ${CHANGE_SOURCE}
 ARG TZ=Asia/Shanghai
 ENV TZ ${TZ}
 RUN if [ ${CHANGE_SOURCE} = true ]; then \
-    printf "%s\n" \
-    "deb https://mirrors.aliyun.com/debian/ bullseye main non-free contrib" \
-    "deb-src https://mirrors.aliyun.com/debian/ bullseye main non-free contrib" \
-    "deb https://mirrors.aliyun.com/debian-security/ bullseye-security main" \
-    "deb-src https://mirrors.aliyun.com/debian-security/ bullseye-security main" \
-    "deb https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib" \
-    "deb-src https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib" \
-    "deb https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib" \
-    "deb-src https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib" > /etc/apt/sources.list \
+    echo "change source." \
+    && sed -i 's|deb.debian.org|mirrors.aliyun.com|g' /etc/apt/sources.list.d/debian.sources \
 ;fi && ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime && echo ${TZ} > /etc/timezone;
 
 RUN set -eux \
     ## alias
     && printf "alias ls='ls --color=auto'\nalias ll='ls -l --color=auto'\nalias l='ls -lA --color=auto'" >> /etc/profile.d/ll.sh \
     ## install packages
-    && install_packages procps \
+    && install_packages procps gcc \
     ## set limits.conf
     && printf "* soft nofile 65536\n* hard nofile 65536\n" >> /etc/security/limits.conf \
     ## set sysctl.conf
