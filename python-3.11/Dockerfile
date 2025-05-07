@@ -10,10 +10,6 @@ FROM python:3.11-slim
 LABEL maintainer="chinayin <whereismoney@qq.com>"
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN set -eux \
-    pwd \
-    tree .
-
 COPY prebuildfs /
 
 ARG CHANGE_SOURCE=true
