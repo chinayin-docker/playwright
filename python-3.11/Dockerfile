@@ -6,7 +6,8 @@
 #--------------------------------------------------------------------------
 #
 
-FROM python:3.11-slim
+ARG PYTHON_VERSION=3.11.13
+FROM python:${PYTHON_VERSION}-slim
 LABEL maintainer="chinayin <whereismoney@qq.com>"
 ENV DEBIAN_FRONTEND=noninteractive
 
